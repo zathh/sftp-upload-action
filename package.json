@@ -21,6 +21,6 @@
   "dependencies": {
     "@actions/core": "^1.7.0",
     "@vercel/ncc": "^0.33.4",
-    "@wangyucode/sftp-sync-deploy": "^0.9.1"
+    "@wangyucode/sftp-sync-deploy": "github:zathh/sftp-sync-deploy#semver:v0.9.2"
   }
 }
