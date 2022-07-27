@@ -1,0 +1,26 @@
+name: Upload files keeping extra files on remote
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create files
+        run: |
+          mkdir -p dist/sub
+          echo "text 1" > dist/1.txt
+          echo "edited text 3" > dist/3.txt
+          echo "edited sub text 1" > dist/sub/sub-1.txt
+
+      - name: SFTP uploader
+        uses: zathh/sftp-upload-action@v1.3.4
+        with:
+          host: '8.tcp.ngrok.io'
+          port: 17966
+          username: 'zath'
+          password: ${{ secrets.PASSWORD }}
+          localDir: 'dist'
+          remoteDir: '/upload'
+          dryRun: true
