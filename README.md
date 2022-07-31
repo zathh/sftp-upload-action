@@ -18,6 +18,7 @@ this is a github action script for upload files to server via SFTP protocol.
   exclude: 'node_modules/,**/*.spec.ts' # Optional. exclude patterns (glob), use ',' to split, Default to ''.
   excludeMode: 'remove'                 # Optional, Behavior for excluded files ('remove' or 'ignore'), Default to 'remove'.
   forceUpload: false                    # Optional, Force uploading all files, Default to false(upload only newer files).
+  keepExtraFiles: false                 # Optional, Whether to delete files not present in remote. Default to false
 ```
 
 ## Example usage

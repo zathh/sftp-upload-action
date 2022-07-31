@@ -17,7 +17,7 @@ let options = {
   dryRun: JSON.parse(core.getInput('dryRun')), // Enable dry-run mode. Default to false
   exclude: core.getInput('exclude').split(','), // exclude patterns (glob)
   excludeMode: core.getInput('excludeMode'), // Behavior for excluded files ('remove' or 'ignore'), Default to 'remove'.
-  keepExtraFiles: core.getInput('keepExtraFiles'), // Whether to delete files not present in remote.
+  keepExtraFiles: JSON.parse(core.getInput('keepExtraFiles')), // Whether to delete files not present in remote.
   forceUpload: JSON.parse(core.getInput('forceUpload')) // Force uploading all files, Default to false(upload only newer files).
 };
 
