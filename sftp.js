@@ -1,4 +1,4 @@
-const { deploy } = require('@wangyucode/sftp-sync-deploy');
+const { deploy } = require('@zathh/sftp-sync-deploy');
 const core = require('@actions/core');
 
 let config = {
